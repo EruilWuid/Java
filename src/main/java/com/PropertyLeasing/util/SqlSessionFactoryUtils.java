@@ -11,14 +11,17 @@ public class SqlSessionFactoryUtils {
     private static SqlSessionFactory sqlSessionFactory;
 
     static {
+        //静态代码块会随着类的加载而自动执行，且只执行一次
+
         try {
             String resource = "mybatis-config.xml";
             InputStream inputStream = Resources.getResourceAsStream(resource);
-            SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+            sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
+
 
     public static SqlSessionFactory getSqlSessionFactory(){
         return sqlSessionFactory;

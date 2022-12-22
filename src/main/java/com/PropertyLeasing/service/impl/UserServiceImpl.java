@@ -12,6 +12,8 @@ public class UserServiceImpl implements UserService {
 
 
     public boolean register(User user){
+
+
         SqlSession sqlSession = factory.openSession();
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
         User u = mapper.selectByUsername(user.getUsername());

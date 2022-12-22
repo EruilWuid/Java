@@ -5,7 +5,7 @@
 <configuration>
 
     <typeAliases>
-        <package name="com.demo.pojo"/>
+        <package name="com.PropertyLeasing.entity"/>
     </typeAliases>
 
     <!--
