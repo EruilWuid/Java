@@ -4,9 +4,14 @@ import com.PropertyLeasing.entity.User;
 import com.PropertyLeasing.service.UserService;
 import com.PropertyLeasing.service.impl.UserServiceImpl;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
+import java.io.File;
 import java.io.IOException;
 
 @WebServlet(name = "RegisterServlet", value = "/RegisterServlet")
@@ -23,7 +28,9 @@ public class RegisterServlet extends HttpServlet {
 
         //service判断
         UserService service = new UserServiceImpl();
-        User user = new User(username,password);
+        User user = new User();
+        user.setUsername(username);
+        user.setPassword(password);
         boolean res = service.register(user);
         //判断是否存在该用户，有返回1，无返回0
 

@@ -8,4 +8,6 @@ public interface UserService {
     public User findUserById(int userid);
 
     public boolean updatePwd(int userid,String password);
+
+    public boolean uploadImg(String fileName,int userid);
 }

@@ -63,4 +63,21 @@ public class UserServiceImpl implements UserService {
 
         return user != null;
     }
+
+
+    @Override
+    public boolean uploadImg(String fileName, int userid) {
+        SqlSession sqlSession = factory.openSession();
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+
+        User user = findUserById(userid);
+        if(user != null){
+            mapper.uploadImg(fileName,userid);
+            sqlSession.commit();
+        }
+
+        sqlSession.close();
+        return user != null;
+
+    }
 }

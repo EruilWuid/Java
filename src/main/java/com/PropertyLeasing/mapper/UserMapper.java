@@ -33,4 +33,8 @@ public interface UserMapper {
     void Upadatapwd(@Param("userid")int userid,@Param("password") String password);
 
 
+    @Update("UPDATE t_user Set uimg = #{uimg} WHERE userid = #{userid}")
+    void uploadImg(@Param("uimg") String uimg,@Param("userid") int userid);
+
+
 }
