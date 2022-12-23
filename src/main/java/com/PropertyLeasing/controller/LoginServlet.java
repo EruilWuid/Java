@@ -31,6 +31,7 @@ public class LoginServlet extends HttpServlet {
 
             HttpSession session = request.getSession();
 
+            //不知道干嘛的
             ServletContext application = this.getServletContext();
             Integer count = (Integer) application.getAttribute("count");
             if (count == null) {
@@ -38,6 +39,9 @@ public class LoginServlet extends HttpServlet {
             } else {
                 application.setAttribute("count", count + 1);
             }
+            //你看着改一下
+
+
             session.setAttribute("USER", user);
             response.sendRedirect("welcome.jsp");
         } else {
