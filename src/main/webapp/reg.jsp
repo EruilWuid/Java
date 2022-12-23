@@ -34,6 +34,7 @@
                     <input id="agent" name="username" type="text" class="required"
                            value placeholder="请输入您的用户名"/>
                 </p>
+                <span style="color: red;margin-left: 94px;font-size: 13px;margin-bottom: 10px">${requestScope.register_msg}</span>
                 <p class="clearfix">
                     <label class="one" for="password">登录密码：</label>
                     <input id="password" name="password" type="password" class="{required:true,rangelength:[8,20],}"

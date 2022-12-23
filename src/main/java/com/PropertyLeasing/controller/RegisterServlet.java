@@ -25,9 +25,13 @@ public class RegisterServlet extends HttpServlet {
 
         boolean res = service.register(user);
         if (res) {
-            response.sendRedirect("head.jsp");
+            response.sendRedirect("login.jsp");
         } else {
-            response.sendRedirect("reg.jsp");
+            request.setAttribute("register_msg","改邮箱已被注册");
+            request.getRequestDispatcher("/reg.jsp").forward(request,response);
         }
+
+
+
     }
 }
