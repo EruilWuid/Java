@@ -13,7 +13,6 @@ public class UserServiceImpl implements UserService {
 
     public boolean register(User user){
 
-
         SqlSession sqlSession = factory.openSession();
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
         User u = mapper.selectByUsername(user.getUsername());
@@ -25,5 +24,13 @@ public class UserServiceImpl implements UserService {
         sqlSession.close();
 
         return u == null;
+    }
+
+     public User login(String username,String password){
+         SqlSession sqlSession = factory.openSession();
+         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+         User user = mapper.select(username,password);
+         sqlSession.close();
+         return user;
     }
 }

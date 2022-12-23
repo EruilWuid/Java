@@ -2,6 +2,7 @@ package com.PropertyLeasing.mapper;
 
 import com.PropertyLeasing.entity.User;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 public interface UserMapper {
@@ -12,6 +13,10 @@ public interface UserMapper {
      */
     @Select("select * from t_user where username = #{username}")
     User selectByUsername(String username);
+
+    @Select("select * from t_user where username = #{username} and password = #{password}")
+    User select(@Param("username") String username, @Param("password")  String password);
+
 
     /**
      * 添加用户

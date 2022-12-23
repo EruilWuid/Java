@@ -20,10 +20,14 @@ public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+
+        //service判断
         UserService service = new UserServiceImpl();
         User user = new User(username,password);
-
         boolean res = service.register(user);
+        //判断是否存在该用户，有返回1，无返回0
+
+
         if (res) {
             response.sendRedirect("login.jsp");
         } else {
