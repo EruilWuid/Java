@@ -5,8 +5,6 @@ public class User {
     private String name;
     private String username;
     private String password;
-    private int sex;
-    private int age;
     private String qq_number;
     private String signature;
     private String phone;
@@ -45,21 +43,6 @@ public class User {
         this.password = password;
     }
 
-    public int getSex() {
-        return sex;
-    }
-
-    public void setSex(int sex) {
-        this.sex = sex;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 
     public String getQq_number() {
         return qq_number;
@@ -93,6 +76,23 @@ public class User {
         this.uimg = uimg;
     }
 
+    public User(int userId, String name, String qq_number, String signature, String phone) {
+        this.userId = userId;
+        this.name = name;
+        this.qq_number = qq_number;
+        this.signature = signature;
+        this.phone = phone;
+    }
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    public  User(){
+
+    }
+
 
     @Override
     public String toString() {
@@ -101,8 +101,6 @@ public class User {
                 ", name='" + name + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", sex=" + sex +
-                ", age=" + age +
                 ", qq_number='" + qq_number + '\'' +
                 ", signature='" + signature + '\'' +
                 ", phone='" + phone + '\'' +

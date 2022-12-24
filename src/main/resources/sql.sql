@@ -5,9 +5,7 @@ CREATE TABLE t_user (
   	name varchar(20),
 	username varchar(20),
 	password varchar(20),
-	sex int,
-	age int,
-	qq_number int,
+	qq_number varchar(20),
 	signature varchar(255),
 	phone varchar(11),
     uimg varchar(255)

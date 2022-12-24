@@ -36,5 +36,6 @@ public interface UserMapper {
     @Update("UPDATE t_user Set uimg = #{uimg} WHERE userid = #{userid}")
     void uploadImg(@Param("uimg") String uimg,@Param("userid") int userid);
 
-
+    @Update("UPDATE t_user SET phone = #{phone},name = #{name},qq_number = #{qq_number},signature = #{signature}  WHERE userid = #{userId}")
+    void UploadUserIfo(User user);
 }

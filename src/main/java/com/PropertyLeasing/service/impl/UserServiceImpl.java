@@ -80,4 +80,22 @@ public class UserServiceImpl implements UserService {
         return user != null;
 
     }
+
+    @Override
+    public boolean updateUserInfo(User user) {
+        SqlSession sqlSession = factory.openSession();
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+
+        int userid = user.getUserId();
+        User flag = findUserById(userid);
+
+        if(flag != null){
+            mapper.UploadUserIfo(user);
+            sqlSession.commit();
+            sqlSession.close();
+        }
+
+        return user != null;
+
+    }
 }

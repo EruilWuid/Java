@@ -28,9 +28,7 @@ public class RegisterServlet extends HttpServlet {
 
         //service判断
         UserService service = new UserServiceImpl();
-        User user = new User();
-        user.setUsername(username);
-        user.setPassword(password);
+        User user = new User(username,password);
         boolean res = service.register(user);
         //判断是否存在该用户，有返回1，无返回0
 

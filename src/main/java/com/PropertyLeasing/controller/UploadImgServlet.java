@@ -34,7 +34,6 @@ public class UploadImgServlet extends HttpServlet {
 
         if (fn.toLowerCase().endsWith(".jpg") || fn.toLowerCase().endsWith(".png")) {
 
-            System.out.print("进来了");
             String nfn = userid + fn;
             file.write(path + "/" + nfn);
             System.out.println("nfn" + nfn);
