@@ -9,16 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4157066-2b0c-4485-8ed2-208eace05121" name="变更" comment="可上传头像">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/controller/UpdateUserInfoServlet.java" afterDir="false" />
+    <list default="true" id="c4157066-2b0c-4485-8ed2-208eace05121" name="变更" comment="加入修改用户资料，user实体类全部完成">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/entity/House.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/mapper/HouseMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/service/HouseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/service/impl/HouseServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/PropertyLeasing/mapper/HouseMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/rentalhouse.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/upload/271623514311143.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/ae26db78-e6e6-4ffe-bc6c-0640e0b5e446.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ae26db78-e6e6-4ffe-bc6c-0640e0b5e446.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/controller/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/controller/RegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/controller/UploadImgServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/controller/UploadImgServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -64,28 +65,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/Java BW/Java_BW&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "F:/Java BW/Java_BW",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "vcs.Git"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ],
-    &quot;RunConfigurationTargetLRU&quot;: [
-      &quot;ae26db78-e6e6-4ffe-bc6c-0640e0b5e446&quot;
+    "RunConfigurationTargetLRU": [
+      "ae26db78-e6e6-4ffe-bc6c-0640e0b5e446"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Java BW\Java_BW\src\main\webapp\WEB-INF" />
@@ -216,7 +219,23 @@
       <workItem from="1671773587544" duration="16913000" />
       <workItem from="1671804757787" duration="6740000" />
       <workItem from="1671812556099" duration="1768000" />
-      <workItem from="1671861626393" duration="7609000" />
+      <workItem from="1671861626393" duration="9163000" />
+      <workItem from="1672047323813" duration="658000" />
+      <workItem from="1672049640279" duration="4688000" />
+      <workItem from="1672055221293" duration="1373000" />
+      <workItem from="1672064328723" duration="369000" />
+      <workItem from="1672068343265" duration="2235000" />
+      <workItem from="1672116103030" duration="4567000" />
+      <workItem from="1672151114777" duration="339000" />
+      <workItem from="1672208914936" duration="16000" />
+      <workItem from="1672212479208" duration="509000" />
+      <workItem from="1672213880158" duration="647000" />
+      <workItem from="1672214639139" duration="1921000" />
+      <workItem from="1672217756477" duration="186000" />
+      <workItem from="1672220461140" duration="1660000" />
+      <workItem from="1672222363263" duration="169000" />
+      <workItem from="1672228528083" duration="6817000" />
+      <workItem from="1672330085364" duration="1192000" />
     </task>
     <task id="LOCAL-00001" summary="基本框架">
       <created>1671719138006</created>
@@ -281,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671812684603</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="加入修改用户资料，user实体类全部完成">
+      <created>1671870157186</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1671870157186</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,6 +374,11 @@
     <MESSAGE value="加入login" />
     <MESSAGE value="可修改密码" />
     <MESSAGE value="可上传头像" />
-    <option name="LAST_COMMIT_MESSAGE" value="可上传头像" />
+    <MESSAGE value="加入修改用户资料，user实体类全部完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="加入修改用户资料，user实体类全部完成" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

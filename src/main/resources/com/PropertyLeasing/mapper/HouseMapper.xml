@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.PropertyLeasing.mapper.HouseMapper">
+    <!--    <insert id="add">-->
+    <!--        -->
+    <!--    </insert>-->
+    <insert id="AddHouse" useGeneratedKeys="true" keyProperty="houseid">
+        INSERT INTO t_house
+        (rent,area,orientation,floor,address,horsedescribe,communityname)
+        VALUES(#{rent},#{area},#{orientation},#{floor},#{address},#{horsedescribe},#{communityname})
+    </insert>
+
+
+</mapper>
