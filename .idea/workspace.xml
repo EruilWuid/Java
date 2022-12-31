@@ -9,17 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4157066-2b0c-4485-8ed2-208eace05121" name="变更" comment="新增租房的Service写完">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/controller/NewHouseInfoServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/entity/Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/houselist.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/controller/UploadImgServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/controller/UploadImgServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/mapper/HouseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/mapper/HouseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/service/HouseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/service/HouseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/service/impl/HouseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/service/impl/HouseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/rentalhouse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/rentalhouse.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="c4157066-2b0c-4485-8ed2-208eace05121" name="变更" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -235,7 +225,7 @@
       <workItem from="1672228528083" duration="6817000" />
       <workItem from="1672330085364" duration="1233000" />
       <workItem from="1672409998421" duration="3729000" />
-      <workItem from="1672467533568" duration="2156000" />
+      <workItem from="1672467533568" duration="2249000" />
     </task>
     <task id="LOCAL-00001" summary="基本框架">
       <created>1671719138006</created>
@@ -314,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672333906181</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="调试版本">
+      <created>1672469712972</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1672469712972</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,7 +380,8 @@
     <MESSAGE value="可上传头像" />
     <MESSAGE value="加入修改用户资料，user实体类全部完成" />
     <MESSAGE value="新增租房的Service写完" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增租房的Service写完" />
+    <MESSAGE value="调试版本" />
+    <option name="LAST_COMMIT_MESSAGE" value="调试版本" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
