@@ -18,11 +18,12 @@ public class HouseServiceImpl implements HouseService {
         HouseMapper mapper = sqlSession.getMapper(HouseMapper.class);
 
         mapper.AddHouse(house);
-        System.out.println("进来了");
+        System.out.println("加入数据了houseid为"+house.getHouseid());
+        int id = house.getHouseid();
         sqlSession.commit();
         sqlSession.close();
 
-        return house.getHouseid();
+        return id;
     }
 
     @Override
@@ -34,7 +35,6 @@ public class HouseServiceImpl implements HouseService {
         sqlSession.commit();
 
         sqlSession.close();
-
     }
 
 

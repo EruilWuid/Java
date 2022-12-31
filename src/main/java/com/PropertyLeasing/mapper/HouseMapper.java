@@ -12,7 +12,7 @@ public interface HouseMapper {
     void AddHouse(House house);
 
     @Insert("insert into renting_house (houseid, userid) VALUES (#{houseid},#{userid})")
-    void CreateRelation(int houseid,int userid);
+    void CreateRelation(@Param("houseid") int houseid,@Param("userid") int userid);
 
     @Select("select * from t_house limit #{begin},#{size}")
     List<House> selectbyPage(@Param("begin") int begin,@Param("size") int size);

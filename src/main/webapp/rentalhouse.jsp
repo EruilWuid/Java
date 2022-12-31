@@ -62,7 +62,7 @@
     </div><!--vip-left/-->
     <div class="vip-right">
       <h3 class="vipright-title">上传房屋信息</h3>
-      <form id="form_1">
+      <form id="form_1" action="NewHouseInfoServlet" method="post">
         <%--获取用户Id--%>
         <table class="grinfo">
           <tbody>
@@ -132,7 +132,7 @@
             <th>&nbsp;</th>
             <td colspan="2">
               <label class="butt" id="butt">
-                <input class="submit" type="submit" value="立即上传"/>
+                <input class="submit"  type="submit" value="立即上传"/>
               </label>
             </td>
           </tr>

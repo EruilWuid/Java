@@ -11,7 +11,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet("/houseInfoServlet")
+@WebServlet(name = "NewHouseInfoServlet", value = "/NewHouseInfoServlet")
 public class NewHouseInfoServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -52,6 +52,7 @@ public class NewHouseInfoServlet extends HttpServlet {
         int houseid = service.AddHouseInfo(house);
         System.out.println("房屋id为："+houseid);
         service.AddrentalRelattion(houseid,userid);
+
 
         response.sendRedirect("rentalhouse.jsp");
 

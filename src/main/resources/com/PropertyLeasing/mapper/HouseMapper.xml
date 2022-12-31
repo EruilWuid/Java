@@ -6,10 +6,10 @@
     <!--    <insert id="add">-->
     <!--        -->
     <!--    </insert>-->
-    <insert id="AddHouse" useGeneratedKeys="true" keyProperty="houseid">
+    <insert id="AddHouse" useGeneratedKeys="true" keyProperty="houseid" keyColumn="houseid">
         INSERT INTO t_house
-        (rent,area,orientation,floor,address,horsedescribe,communityname)
-        VALUES(#{rent},#{area},#{orientation},#{floor},#{address},#{horsedescribe},#{communityname})
+        (rent,area,orientation,floor,address,housedescribe,communityname)
+        VALUES(#{rent},#{area},#{orientation},#{floor},#{address},#{housedescribe},#{communityname})
     </insert>
 
 
