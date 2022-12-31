@@ -17,11 +17,12 @@ public class NewHouseInfoServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("进入了servlet");
+       // System.out.println("进入了servlet");
         doPost(req,resp);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
         User user = (User) request.getSession().getAttribute("USER");
         int userid = user.getUserId();
         // 获取前台提交的房屋信息
@@ -46,7 +47,7 @@ public class NewHouseInfoServlet extends HttpServlet {
         house.setUimg(uimg);
 
 
-        System.out.println("进入了severlet");
+        System.out.println("进入了severlet，房屋朝向为"+orientation);
         // 使用 HouseDAO 将房屋信息保存到数据库中
         HouseService service = new HouseServiceImpl();
         int houseid = service.AddHouseInfo(house);

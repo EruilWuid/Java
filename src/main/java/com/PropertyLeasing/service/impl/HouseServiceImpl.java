@@ -18,7 +18,7 @@ public class HouseServiceImpl implements HouseService {
         HouseMapper mapper = sqlSession.getMapper(HouseMapper.class);
 
         mapper.AddHouse(house);
-        System.out.println("加入数据了houseid为"+house.getHouseid());
+        System.out.println("加入数据了朝向为"+house.getOrientation());
         int id = house.getHouseid();
         sqlSession.commit();
         sqlSession.close();

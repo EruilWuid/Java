@@ -9,7 +9,7 @@ CREATE TABLE t_user (
 	signature varchar(255),
 	phone varchar(11),
     uimg varchar(255)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ;
 
 
 CREATE TABLE t_house (
@@ -23,7 +23,7 @@ CREATE TABLE t_house (
 #     communityid int,
     communityname varchar(20),
     uimg varchar(255)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+)  ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE renting_house(
     houseid int primary key ,
