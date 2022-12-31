@@ -9,18 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4157066-2b0c-4485-8ed2-208eace05121" name="变更" comment="加入修改用户资料，user实体类全部完成">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/entity/House.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/mapper/HouseMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/service/HouseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/service/impl/HouseServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/PropertyLeasing/mapper/HouseMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/rentalhouse.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/upload/271623514311143.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ae26db78-e6e6-4ffe-bc6c-0640e0b5e446.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ae26db78-e6e6-4ffe-bc6c-0640e0b5e446.xml" afterDir="false" />
+    <list default="true" id="c4157066-2b0c-4485-8ed2-208eace05121" name="变更" comment="新增租房的Service写完">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/controller/NewHouseInfoServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/entity/Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/houselist.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/controller/UploadImgServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/controller/UploadImgServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/mapper/HouseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/mapper/HouseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/service/HouseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/service/HouseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/service/impl/HouseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/service/impl/HouseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/rentalhouse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/rentalhouse.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Interface" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
@@ -235,7 +233,9 @@
       <workItem from="1672220461140" duration="1660000" />
       <workItem from="1672222363263" duration="169000" />
       <workItem from="1672228528083" duration="6817000" />
-      <workItem from="1672330085364" duration="1192000" />
+      <workItem from="1672330085364" duration="1233000" />
+      <workItem from="1672409998421" duration="3729000" />
+      <workItem from="1672467533568" duration="2156000" />
     </task>
     <task id="LOCAL-00001" summary="基本框架">
       <created>1671719138006</created>
@@ -307,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671870157186</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="新增租房的Service写完">
+      <created>1672333906181</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1672333906181</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,7 +382,8 @@
     <MESSAGE value="可修改密码" />
     <MESSAGE value="可上传头像" />
     <MESSAGE value="加入修改用户资料，user实体类全部完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="加入修改用户资料，user实体类全部完成" />
+    <MESSAGE value="新增租房的Service写完" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增租房的Service写完" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

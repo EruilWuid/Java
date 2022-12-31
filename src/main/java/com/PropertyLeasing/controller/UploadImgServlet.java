@@ -21,6 +21,7 @@ public class UploadImgServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         request.setCharacterEncoding("utf-8");  //请求的编码
         response.setContentType("text/html; charset=utf-8");  //响应编码
      //   System.out.print("进来了");

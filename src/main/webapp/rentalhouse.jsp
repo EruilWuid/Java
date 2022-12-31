@@ -68,25 +68,25 @@
           <tbody>
           <tr>
             <th>租金：</th>
-            <td><input class="inp inw" type="text" name="rent" value="元/月">
+            <td><input class="inp inw" type="text" name="rent" >
             </td>
           </tr>
           <tr>
             <th> 面积：</th>
             <td>
-              <input class="inp inw" name="area" type="text" value="平方米">
+              <input class="inp inw" name="area" type="text" >
             </td>
           </tr>
           <tr>
             <th>&nbsp;阳台朝向：</th>
             <td>
-              <input class="inp inw" type="text" maxlength="20" value="南/北" name="orientation">
+              <input class="inp inw" type="text" maxlength="20"  name="orientation">
             </td>
           </tr>
           <tr>
             <th> 楼层：</th>
             <td>
-              <input class="inp inw" name="floor" type="text" value="楼">
+              <input class="inp inw" name="floor" type="text" >
             </td>
           </tr>
           <tr>
@@ -123,7 +123,7 @@
           <tr>
             <th valign="top">房屋描述：</th>
             <td>
-              <input class="inp inw" id="horsedescribe" name="horsedescribe" value="${house.horsedescribe}"></input>
+              <input class="inp inw" id="horsedescribe" name="horsedescribe" ></input>
               <br>
               <span class="fgrey">(100字以内)</span>
             </td>
