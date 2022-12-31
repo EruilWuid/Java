@@ -4,7 +4,6 @@ import com.PropertyLeasing.entity.House;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -14,9 +13,17 @@ public interface HouseMapper {
     @Insert("insert into renting_house (houseid, userid) VALUES (#{houseid},#{userid})")
     void CreateRelation(@Param("houseid") int houseid,@Param("userid") int userid);
 
-    @Select("select * from t_house limit #{begin},#{size}")
-    List<House> selectbyPage(@Param("begin") int begin,@Param("size") int size);
+    @Select("select * from t_house ")
+    List<House> selectAll();
 
-    @Select("select count(*) from t_house")
-    int selectTotalCount();
+    List<House> selectByCondition(House house);
+
+    void UpdateHouseInfo(House house);
+
+    List<House> selectByuserid(@Param("userid") int userid);
+//    @Select("select * from t_house limit #{begin},#{size}")
+//    List<House> selectbyPage(@Param("begin") int begin,@Param("size") int size);
+//
+//    @Select("select count(*) from t_house")
+//    int selectTotalCount();
 }
