@@ -28,4 +28,6 @@ CREATE TABLE t_house (
 CREATE TABLE renting_house(
     houseid int primary key ,
     userid int
-)
+);
+
+alter table renting_house add constraint foreign key(houseid) REFERENCES t_house(houseid);

@@ -18,7 +18,7 @@ public class HouseServiceImpl implements HouseService {
         HouseMapper mapper = sqlSession.getMapper(HouseMapper.class);
 
         mapper.AddHouse(house);
-        System.out.println("加入数据了朝向为"+house.getOrientation());
+       // System.out.println("加入数据了朝向为"+house.getOrientation());
         int id = house.getHouseid();
         sqlSession.commit();
         sqlSession.close();
@@ -74,6 +74,49 @@ public class HouseServiceImpl implements HouseService {
         List<House> houses = mapper.selectAll();
         sqlSession.close();
 
+        return houses;
+    }
+
+    @Override
+    public List<House> SelectByCondition(House house) {
+        SqlSession sqlSession = factory.openSession();
+        HouseMapper mapper = sqlSession.getMapper(HouseMapper.class);
+
+        List<House> houses = mapper.selectByCondition(house);
+        sqlSession.close();
+
+        return houses;
+    }
+
+    @Override
+    public void DeleteHouse(int houseid) {
+        SqlSession sqlSession = factory.openSession();
+        HouseMapper mapper = sqlSession.getMapper(HouseMapper.class);
+
+        mapper.DeleteRelation(houseid);
+        mapper.DeleteHouseInfo(houseid);
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+    @Override
+    public void UpdateHouseInfo(House house) {
+
+        SqlSession sqlSession = factory.openSession();
+        HouseMapper mapper = sqlSession.getMapper(HouseMapper.class);
+
+        mapper.UpdateHouseInfo(house);
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+    @Override
+    public List<House> SelectByUserid(int userid) {
+        SqlSession sqlSession = factory.openSession();
+        HouseMapper mapper = sqlSession.getMapper(HouseMapper.class);
+
+        List<House> houses = mapper.selectByuserid(userid);
+        sqlSession.close();
         return houses;
     }
 }

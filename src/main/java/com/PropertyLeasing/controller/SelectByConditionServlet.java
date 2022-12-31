@@ -11,21 +11,29 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "SelectAllServlet", value = "/SelectAllServlet")
-public class SelectAllServlet extends HttpServlet {
+@WebServlet(name = "SelectByConditionServlet", value = "/SelectByConditionServlet")
+public class SelectByConditionServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HouseService service = new HouseServiceImpl();
-        List<House> houses = service.SelectAll();
-
-        String jsonString = JSON.toJSONString(houses);
-        System.out.println("进入了severlet");
-        response.setContentType("text/json;charset=utf-8");
-        response.getWriter().write(jsonString);
+        doPost(request,response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);
+        String communityname = request.getParameter("communityname");
+        double area = Double.parseDouble(request.getParameter("area"));
+        double rent = Double.parseDouble(request.getParameter("rent"));
+
+        House house = new House(rent,area,communityname);
+
+        HouseService service = new HouseServiceImpl();
+        List<House> houses = service.SelectByCondition(house);
+
+        String jsonString = JSON.toJSONString(houses);
+
+        response.setContentType("text/json;charset=utf-8");
+        response.getWriter().write(jsonString);
     }
+
+
 }

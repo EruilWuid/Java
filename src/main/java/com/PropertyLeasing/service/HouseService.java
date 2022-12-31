@@ -18,4 +18,12 @@ public interface HouseService {
 //    public Page<House> selectByPage(int currentPage, int pageSize);
 
     public List<House> SelectAll();
+
+    public List<House> SelectByCondition(House house);
+
+    public void UpdateHouseInfo(House house);
+
+    public void DeleteHouse(int houseid);
+
+    public List<House> SelectByUserid(int userid);
 }

@@ -1,6 +1,8 @@
 package com.PropertyLeasing.controller;
 
 import com.PropertyLeasing.entity.House;
+import com.PropertyLeasing.entity.User;
+import com.PropertyLeasing.mapper.HouseMapper;
 import com.PropertyLeasing.service.HouseService;
 import com.PropertyLeasing.service.impl.HouseServiceImpl;
 import com.alibaba.fastjson.JSON;
@@ -11,21 +13,24 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "SelectAllServlet", value = "/SelectAllServlet")
-public class SelectAllServlet extends HttpServlet {
+@WebServlet(name = "SelectByUseridServlet", value = "/SelectByUseridServlet")
+public class SelectByUseridServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        User user = (User) request.getSession().getAttribute("USER");
+        int userid = user.getUserId();
+
         HouseService service = new HouseServiceImpl();
-        List<House> houses = service.SelectAll();
+        List<House> houses = service.SelectByUserid(userid);
 
         String jsonString = JSON.toJSONString(houses);
-        System.out.println("进入了severlet");
+
         response.setContentType("text/json;charset=utf-8");
         response.getWriter().write(jsonString);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);
+        doPost(request,response);
     }
 }

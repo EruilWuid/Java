@@ -83,6 +83,26 @@ public class House {
         this.uimg = uimg;
     }
 
+    public House() {
+    }
+
+    public House(double rent, double area, String communityname) {
+        this.rent = rent;
+        this.area = area;
+        this.communityname = communityname;
+    }
+
+    public House(double rent, double area, String orientation, int floor, String address, String housedescribe, String communityname, String uimg) {
+        this.rent = rent;
+        this.area = area;
+        this.orientation = orientation;
+        this.floor = floor;
+        this.address = address;
+        this.housedescribe = housedescribe;
+        this.communityname = communityname;
+        this.uimg = uimg;
+    }
+
     @Override
     public String toString() {
         return "House{" +

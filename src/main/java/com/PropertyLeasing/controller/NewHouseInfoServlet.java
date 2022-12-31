@@ -59,7 +59,7 @@ public class NewHouseInfoServlet extends HttpServlet {
 
 
 
-// 向前台返回成功消息
-        response.getWriter().write("房屋信息保存成功！");
+    // 向前台返回成功消息
+       // response.getWriter().write("房屋信息保存成功！");
     }
 }
