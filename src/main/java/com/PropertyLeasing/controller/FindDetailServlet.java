@@ -11,27 +11,31 @@ import javax.jws.soap.SOAPBinding;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
+import javax.sound.midi.Soundbank;
+import java.io.BufferedReader;
 import java.io.IOException;
 
 @WebServlet(name = "FindDetailServlet", value = "/FindDetailServlet")
 public class FindDetailServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request,response);
+        int houseid = (int) request.getSession().getAttribute("houseid");
+        HouseService service = new HouseServiceImpl();
+
+        System.out.println("有了"+houseid);
+        House house = service.FindDetail(houseid);
+        User user = service.FindUser(houseid);
+
+        Detail detail = new Detail(house,user);
+
+       // System.out.println("username:"+detail.getUsername());
+        String jsonString = JSON.toJSONString(detail);
+        response.setContentType("text/json;charset=utf-8");
+        response.getWriter().write(jsonString);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int houseid = Integer.parseInt(request.getParameter("houseid"));
-
-        HouseService service = new HouseServiceImpl();
-        House house = service.FindDetail(houseid);
-        User user = service.FindUser(houseid);
-        Detail detail = new Detail(house,user);
-
-        String jsonString = JSON.toJSONString(detail);
-        response.setContentType("text/json;charset=utf-8");
-        response.getWriter().write(jsonString);
-
+        doGet(request,response);
     }
 }

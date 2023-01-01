@@ -8,6 +8,7 @@ import com.alibaba.fastjson.JSON;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.List;
 
@@ -20,11 +21,16 @@ public class SelectByConditionServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String communityname = request.getParameter("communityname");
-        double area = Double.parseDouble(request.getParameter("area"));
-        double rent = Double.parseDouble(request.getParameter("rent"));
+//        String communityname = request.getParameter("communityname");
+//        double area = Double.parseDouble(request.getParameter("area"));
+//        double rent = Double.parseDouble(request.getParameter("rent"));
 
-        House house = new House(rent,area,communityname);
+        // 获取查询条件对象
+        BufferedReader br = request.getReader();
+        String params = br.readLine();//json字符串
+
+        //转为 Brand
+        House house = JSON.parseObject(params, House.class);
 
         HouseService service = new HouseServiceImpl();
         List<House> houses = service.SelectByCondition(house);

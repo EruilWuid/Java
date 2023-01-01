@@ -57,8 +57,6 @@ public class NewHouseInfoServlet extends HttpServlet {
         System.out.println("房屋id为："+houseid);
         service.AddrentalRelattion(houseid,userid);
 
-        PrintWriter pw=response.getWriter();
-        pw.write("<script language='javascript'>alert('上传成功')</script>");
         response.sendRedirect("rentalhouse.jsp");
 
 

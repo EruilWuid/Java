@@ -48,7 +48,7 @@
 
                 clearTimeout(t);
 
-                window.location.href = "http://localhost:8080/Java_BW_war/pro_er.jsp";
+                window.location.href = "http://localhost:8080/Java_BW_war/pro_er";
 
             }
 

@@ -31,15 +31,21 @@
         from t_house
         <where>
             <if test="communityname != null and communityname != '' ">
-                communtyname = #{communityname}
+                and communityname = #{communityname}
             </if>
 
-            <if test="area != null">
-                area >= #{area} and area <![CDATA[<]]> #{area}+20
+            <if test="area != 0.00 and area lt 81.0">
+                and area >= #{area} and area <![CDATA[<]]> #{area}+20.0
             </if>
 
-            <if test="rent != null">
-                rent >= #{rent} and rent <![CDATA[<]]> #{rent}+1000
+            <if test="rent != 0.00 and rent lt 4000.0">
+                and rent >= #{rent} and rent <![CDATA[<]]> #{rent}+1000.0
+            </if>
+            <if test="area != 0.00 and area >= 81.0">
+                and area >= #{area}
+            </if>
+            <if test="rent != 0.00 and rent >= 4000.0">
+                and rent >= #{rent}
             </if>
         </where>
     </select>

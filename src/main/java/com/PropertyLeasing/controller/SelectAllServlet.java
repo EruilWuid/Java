@@ -18,10 +18,14 @@ public class SelectAllServlet extends HttpServlet {
         HouseService service = new HouseServiceImpl();
         List<House> houses = service.SelectAll();
 
+
         String jsonString = JSON.toJSONString(houses);
-        System.out.println("进入了severlet");
+
+       // System.out.println("进入了severlet");
+
         response.setContentType("text/json;charset=utf-8");
         response.getWriter().write(jsonString);
+
     }
 
     @Override
