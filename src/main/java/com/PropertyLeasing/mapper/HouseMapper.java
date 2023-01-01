@@ -1,6 +1,8 @@
 package com.PropertyLeasing.mapper;
 
+import com.PropertyLeasing.controller.LogoutServlet;
 import com.PropertyLeasing.entity.House;
+import com.PropertyLeasing.entity.User;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
@@ -28,8 +30,14 @@ public interface HouseMapper {
     @Delete("delete from t_house where houseid = #{houseid}")
     void DeleteHouseInfo(@Param("houseid") int houseid);
 
+    @Select("select * from t_house where houseid = #{houseid}")
+    House SelectByhouseid(@Param("houseid") int houseid);
 
+    User SelectUserByHouseid(@Param("houseid") int houseid);
 
+    List<House> OrderByrent(@Param("state") int state);
+
+    List<House> OrderByarea(@Param("state") int state);
 
 //    @Select("select * from t_house limit #{begin},#{size}")
 //    List<House> selectbyPage(@Param("begin") int begin,@Param("size") int size);

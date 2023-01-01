@@ -2,12 +2,14 @@ package com.PropertyLeasing.service.impl;
 
 import com.PropertyLeasing.entity.House;
 import com.PropertyLeasing.entity.Page;
+import com.PropertyLeasing.entity.User;
 import com.PropertyLeasing.mapper.HouseMapper;
 import com.PropertyLeasing.service.HouseService;
 import com.PropertyLeasing.util.SqlSessionFactoryUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class HouseServiceImpl implements HouseService {
@@ -117,6 +119,42 @@ public class HouseServiceImpl implements HouseService {
 
         List<House> houses = mapper.selectByuserid(userid);
         sqlSession.close();
+        return houses;
+    }
+
+    @Override
+    public House FindDetail(int houseid) {
+        SqlSession sqlSession = factory.openSession();
+        HouseMapper mapper = sqlSession.getMapper(HouseMapper.class);
+
+        House house = mapper.SelectByhouseid(houseid);
+        sqlSession.close();
+        return house;
+    }
+
+    @Override
+    public User FindUser(int houseid) {
+        SqlSession sqlSession = factory.openSession();
+        HouseMapper mapper = sqlSession.getMapper(HouseMapper.class);
+
+        User user = mapper.SelectUserByHouseid(houseid);
+        sqlSession.close();
+        return user;
+    }
+
+    @Override
+    public List<House> Order(int type, int state) {
+        SqlSession sqlSession = factory.openSession();
+        HouseMapper mapper = sqlSession.getMapper(HouseMapper.class);
+
+        List<House> houses = new ArrayList<>();
+        if(type == 1){
+            houses = mapper.OrderByrent(state);
+        }
+        else houses = mapper.OrderByarea(state);
+
+        sqlSession.close();
+
         return houses;
     }
 }

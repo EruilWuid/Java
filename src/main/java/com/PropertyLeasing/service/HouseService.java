@@ -2,6 +2,7 @@ package com.PropertyLeasing.service;
 
 import com.PropertyLeasing.entity.House;
 import com.PropertyLeasing.entity.Page;
+import com.PropertyLeasing.entity.User;
 import com.PropertyLeasing.mapper.UserMapper;
 import org.apache.ibatis.session.SqlSession;
 
@@ -26,4 +27,10 @@ public interface HouseService {
     public void DeleteHouse(int houseid);
 
     public List<House> SelectByUserid(int userid);
+
+    public House FindDetail(int houseid);
+
+    public User FindUser(int houseid);
+
+    public List<House> Order(int type,int state);
 }

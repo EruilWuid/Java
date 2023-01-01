@@ -9,7 +9,9 @@ import com.sun.javaws.IconUtil;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
+import javax.swing.*;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet(name = "NewHouseInfoServlet", value = "/NewHouseInfoServlet")
 public class NewHouseInfoServlet extends HttpServlet {
@@ -22,7 +24,8 @@ public class NewHouseInfoServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("UTF-8");
+       // request.setCharacterEncoding("UTF-8");
+
         User user = (User) request.getSession().getAttribute("USER");
         int userid = user.getUserId();
         // 获取前台提交的房屋信息
@@ -54,7 +57,8 @@ public class NewHouseInfoServlet extends HttpServlet {
         System.out.println("房屋id为："+houseid);
         service.AddrentalRelattion(houseid,userid);
 
-
+        PrintWriter pw=response.getWriter();
+        pw.write("<script language='javascript'>alert('上传成功')</script>");
         response.sendRedirect("rentalhouse.jsp");
 
 

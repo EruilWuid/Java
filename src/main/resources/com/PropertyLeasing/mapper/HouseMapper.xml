@@ -50,6 +50,33 @@
         where houseid in (select houseid from renting_house where userid = #{userid});
     </select>
 
+    <select id="SelectUserByHouseid" resultType="com.PropertyLeasing.entity.User">
+        select *
+        from t_user
+        where userId = (select userid from renting_house where houseid = #{houseid});
+    </select>
+
+    <select id="OrderByrent" resultType="com.PropertyLeasing.entity.House">
+        select *
+        from t_house
+        <if test="state == 1">
+            order by rent ASC
+        </if>
+        <if test="state == 0">
+            order by rent DESC
+        </if>
+    </select>
+
+    <select id="OrderByarea" resultType="com.PropertyLeasing.entity.House">
+        select *
+        from t_house
+        <if test="state == 1">
+            order by area ASC
+        </if>
+        <if test="state == 1">
+            order by area DESC
+        </if>
+    </select>
 
 
 </mapper>

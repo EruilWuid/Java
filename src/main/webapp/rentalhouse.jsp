@@ -99,23 +99,23 @@
           <tr>
             <th> 所处区：</th>
             <td>
-              <select>
-                <option value="pudong">浦东新区</option>
-                <option value="huangpu">黄浦区</option>
-                <option value="qingpu">青浦区</option>
-                <option value="baoshan">宝山区</option>
-                <option value="jinshan">金山区</option>
-                <option value="putuo">普陀区</option>
-                <option value="jingan">静安区</option>
-                <option value="xuhui">徐汇区</option>
-                <option value="changning">长宁区</option>
-                <option value="hongkou">虹口区</option>
-                <option value="yangpu">杨浦区</option>
-                <option value="minhang">闵行区</option>
-                <option value="jiading">嘉定区</option>
-                <option value="fengxian">奉贤区</option>
-                <option value="songjiang">松江区</option>
-                <option value="chongming">崇明区</option>
+              <select name = "communityname">
+                <option value="浦东新区">浦东新区</option>
+                <option value="黄浦区">黄浦区</option>
+                <option value="青浦区">青浦区</option>
+                <option value="宝山区">宝山区</option>
+                <option value="金山区">金山区</option>
+                <option value="普陀区">普陀区</option>
+                <option value="静安区">静安区</option>
+                <option value="徐汇区">徐汇区</option>
+                <option value="长宁区">长宁区</option>
+                <option value="虹口区">虹口区</option>
+                <option value="杨浦区">杨浦区</option>
+                <option value="闵行区">闵行区</option>
+                <option value="嘉定区">嘉定区</option>
+                <option value="奉贤区">奉贤区</option>
+                <option value="松江区">松江区</option>
+                <option value="崇明区">崇明区</option>
               </select>
             </td>
 
@@ -123,7 +123,7 @@
           <tr>
             <th valign="top">房屋描述：</th>
             <td>
-              <input class="inp inw" id="horsedescribe" name="horsedescribe" ></input>
+              <input class="inp inw" id="housedescribe" name="housedescribe" ></input>
               <br>
               <span class="fgrey">(100字以内)</span>
             </td>
@@ -136,6 +136,7 @@
               </label>
             </td>
           </tr>
+          <span style="color: red;margin-left: 94px;font-size: 13px;margin-bottom: 10px">${requestScope.House_msg}</span>
           </tbody>
         </table>
       </form>
