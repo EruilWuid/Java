@@ -92,9 +92,12 @@
             prop="address"
             label="操作"
             align="center">
+
       <template slot-scope="scope">
         <el-button type="primary"  @click="jump(scope.row)" name="houseid">查看详情</el-button>
       </template>
+
+
 
 
 
@@ -148,6 +151,8 @@
           method: "post",
           url:"http://localhost:8080/Java_BW_war/SaveDetailServlet",
           data:row
+        }).then(response => {
+          window.location.assign('/Java_BW_war/Info.jsp')
         })
       },
       onSubmit() {

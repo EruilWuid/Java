@@ -5,6 +5,13 @@
   Time: 16:46
   To change this template use File | Settings | File Templates.
 --%>
+<%--
+  Created by IntelliJ IDEA.
+  User: leo
+  Date: 2023/1/1
+  Time: 16:46
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -31,7 +38,7 @@
             style="width: 100%"
             :row-class-name="tableRowClassName">
       <el-table-column
-              prop="houseId"
+              prop="houseid"
               label="房屋id"
               align="center">
       </el-table-column>
@@ -117,11 +124,10 @@
 
   <%--    </table>--%>
 </div>
-
-  <script src="js/axios-0.18.0.js"></script>
-  <script src="js/vue.js"></script>
-  <script src="element-ui/lib/index.js"></script>
-  <link rel="stylesheet" href="element-ui/lib/theme-chalk/index.css">
+<script src="js/axios-0.18.0.js"></script>
+<script src="js/vue.js"></script>
+<script src="element-ui/lib/index.js"></script>
+<link rel="stylesheet" href="element-ui/lib/theme-chalk/index.css">
 
 
 <script>
@@ -130,17 +136,13 @@
     data(){
       return{
         houses:[],
-        housetable:[]
+        housetable: ""
       }
     },
     methods:{
       tableRowClassName({row, rowIndex}) {
-        if (rowIndex === 1) {
-          return 'warning-row';
-        } else if (rowIndex === 3) {
-          return 'success-row';
-        }
-        return '';
+        return 'warning-row';
+
       },
       show(){
         var _this=this;
@@ -149,6 +151,10 @@
           url:"http://localhost:8080/Java_BW_war/FindDetailServlet"
         }).then(function(resp){
           _this.housetable = resp.data;
+          console.log("data数据");
+          console.log(resp.data);
+          console.log("house数据");
+          console.log(_this.housetable);
         })
       }
     },
@@ -159,9 +165,11 @@
         url:"http://localhost:8080/Java_BW_war/FindDetailServlet"
       }).then(function(resp){
         _this.housetable = resp.data;
+        console.log("data数据");
+        console.log(resp.data);
+        console.log("house数据");
+        console.log(_this.housetable);
       })
-
-
     }
 
 

@@ -92,7 +92,8 @@ public class House {
         this.communityname = communityname;
     }
 
-    public House(double rent, double area, String orientation, int floor, String address, String housedescribe, String communityname, String uimg) {
+    public House(int houseid,double rent, double area, String orientation, int floor, String address, String housedescribe, String communityname, String uimg) {
+        this.houseid = houseid;
         this.rent = rent;
         this.area = area;
         this.orientation = orientation;

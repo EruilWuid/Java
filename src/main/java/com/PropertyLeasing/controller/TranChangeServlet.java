@@ -9,8 +9,8 @@ import javax.servlet.annotation.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 
-@WebServlet(name = "SaveDetailServlet", value = "/SaveDetailServlet")
-public class SaveDetailServlet extends HttpServlet {
+@WebServlet(name = "TranChangeServlet", value = "/TranChangeServlet")
+public class TranChangeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request,response);
@@ -24,10 +24,7 @@ public class SaveDetailServlet extends HttpServlet {
         House house = JSON.parseObject(params, House.class);
         int houseid = house.getHouseid();
 
-        System.out.println("房屋id是"+houseid);
-
         HttpSession session = request.getSession();
-        session.setAttribute("houseid", houseid);
-
+        session.setAttribute("Houseid", houseid);
     }
 }

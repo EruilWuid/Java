@@ -15,12 +15,12 @@
     <update id="UpdateHouseInfo">
         update t_house
         <set>
-            <if test="rent != null"> rent = #{rent} </if>
-            <if test="area != null"> area = #{area} </if>
-            <if test="orientation != null"> orientation = #{orientation} </if>
-            <if test="floor != null"> floor = #{floor} </if>
-            <if test="address != null"> address = #{address} </if>
-            <if test="housedescribe != null"> housedescribe = #{housedescribe} </if>
+            <if test="rent != 0.00"> rent = #{rent} ,</if>
+            <if test="area != 0.00"> area = #{area} ,</if>
+            <if test="orientation != null"> orientation = #{orientation} ,</if>
+            <if test="floor != 0">floor = #{floor}, </if>
+            <if test="address != null"> address = #{address}, </if>
+            <if test="housedescribe != null"> housedescribe = #{housedescribe} ,</if>
             <if test="communityname != null"> communityname = #{communityname} </if>
         </set>
             where houseid = #{houseid}

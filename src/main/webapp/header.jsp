@@ -71,14 +71,9 @@
             </div>
         </div><!--list/-->
         <ul class="nav">
-            <li><a href="welcome.jsp">首页</a></li>
-            <li><a href="FindAllHorseServlet?categoryid=1">租房</a></li>
-            <li><a href="FindAllHorseServlet?categoryid=2">新房</a></li>
-            <li><a href="FindAllHorseServlet?categoryid=3">二手房</a></li>
-            <c:if test="${sessionScope.USER!=null}">
-                <%--  <li class="zhiding"><a href="javascript:;">指定购房</a></li>--%>
-                <li><a href="FindAllAgentServlet">申请自由经纪人</a></li>
-            </c:if>
+            <li><a href="pro_er.jsp">首页</a></li>
+            <li><a href="rentalhouse.jsp">新增房屋信息</a></li>
+            <li><a href="myhouse.jsp">管理我的房屋</a></li>
             <li><a href="about.jsp">关于我们</a></li>
             <div class="clears"></div>
         </ul><!--nav/-->

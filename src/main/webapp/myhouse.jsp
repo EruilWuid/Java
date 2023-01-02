@@ -131,16 +131,21 @@
                     data:row
                 }).then(function(resp){
                     _this.housetable = resp.data;
+                }).then(function (response) {
+                    // 刷新页面
+                    window.location.reload()
                 })
             },
             change(row){
                 var _this=this;
                 axios({
                     method: "post",
-                    url:"http://localhost:8080/Java_master_3_war_exploded/SelectAllServlet",
+                    url:"http://localhost:8080/Java_BW_war/TranChangeServlet",
                     data:row
                 }).then(function(resp){
                     _this.housetable = resp.data;
+                }).then(response => {
+                    window.location.assign('/Java_BW_war/changeinfo.jsp')
                 })
 
             },
@@ -175,27 +180,27 @@
 </script>
 
 
-        <div class="footer">
-            <div class="width1190">
-                <div class="fl"><a href="index.html"><strong>XXX</strong></a><a href="about.jsp">关于我们</a><a
-                        href="contact.jsp">联系我们</a><a href="user.jsp">个人中心</a></div>
-                <div class="fr">
-                    <dl>
-                        <dt><img src="images/erweima.png" width="76" height="76"/></dt>
-                        <dd>微信扫一扫<br/>房价点评，精彩发布</dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="images/erweima.png" width="76" height="76"/></dt>
-                        <dd>微信扫一扫<br/>房价点评，精彩发布</dd>
-                    </dl>
-                    <div class="clears"></div>
-                </div>
-                <div class="clears"></div>
-            </div><!--width1190/-->
-        </div><!--footer/-->
-        <div class="copy">Copyright@ 2020 XXX 版权所有 沪ICP备XXX号-0&nbsp;&nbsp;&nbsp;&nbsp;技术支持：<a target="_blank" href="/">XXX</a>
+<div class="footer">
+    <div class="width1190">
+        <div class="fl"><a href="about.jsp">关于我们</a><a
+                href="contact.jsp">联系我们</a><a href="user.jsp">个人中心</a></div>
+        <div class="fr">
+            <dl>
+                <dt><img src="images/erweima.png" width="76" height="76"/></dt>
+                <dd>微信扫一扫<br/>房价点评，精彩发布</dd>
+            </dl>
+            <dl>
+                <dt><img src="images/erweima.png" width="76" height="76"/></dt>
+                <dd>微信扫一扫<br/>房价点评，精彩发布</dd>
+            </dl>
+            <div class="clears"></div>
         </div>
-        <div class="bg100"></div>
+        <div class="clears"></div>
+    </div><!--width1190/-->
+</div><!--footer/-->
+<div class="copy">Copyright@ 2023 房屋租赁系统 版权所有 上海海洋大学&nbsp;&nbsp;&nbsp;&nbsp;技术支持：<a target="_blank" href="https://www.csdn.net">CSDN</a>
+</div>
+<div class="bg100"></div>
 
 </body>
 </html>

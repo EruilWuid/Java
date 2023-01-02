@@ -14,6 +14,8 @@ import javax.servlet.annotation.*;
 import javax.sound.midi.Soundbank;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet(name = "FindDetailServlet", value = "/FindDetailServlet")
 public class FindDetailServlet extends HttpServlet {
@@ -28,8 +30,10 @@ public class FindDetailServlet extends HttpServlet {
 
         Detail detail = new Detail(house,user);
 
+        List<Detail> details = new ArrayList<>();
+        details.add(detail);
        // System.out.println("username:"+detail.getUsername());
-        String jsonString = JSON.toJSONString(detail);
+        String jsonString = JSON.toJSONString(details);
         response.setContentType("text/json;charset=utf-8");
         response.getWriter().write(jsonString);
     }

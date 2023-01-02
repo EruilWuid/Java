@@ -18,20 +18,41 @@ public class UpdateHouseInfoServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        double rent = Double.parseDouble(request.getParameter("rent"));
-        double area = Double.parseDouble(request.getParameter("area"));
-        int floor = Integer.parseInt(request.getParameter("floor"));
+
+        String t_rent = request.getParameter("rent");
+        String t_area = request.getParameter("area");
+        String t_floor = request.getParameter("floor");
         String orientation = request.getParameter("orientation");
         String address = request.getParameter("address");
         String housedescribe = request.getParameter("housedescribe");
         String communityName = request.getParameter("communityname");
         String uimg = request.getParameter("uimg");
+        int houseid = (int) request.getSession().getAttribute("Houseid");
 
-        House house = new House(rent,area,orientation,floor,address,housedescribe,communityName,uimg);
+        double rent = 0.00;
+        double area = 0.00;
+        int floor = 0;
+        if(t_rent != ""){
+             //System.out.println(t_rent);
+             rent = Double.parseDouble(t_rent);
+        }
+
+        if(t_rent != ""){
+             area = Double.parseDouble(t_area);
+        }
+        if(t_floor != ""){
+            floor = Integer.parseInt(t_floor);
+        }
+
+
+
+        House house = new House(houseid,rent,area,orientation,floor,address,housedescribe,communityName,uimg);
 
         HouseService service = new HouseServiceImpl();
         service.UpdateHouseInfo(house);
 
-        response.sendRedirect("");
+        response.sendRedirect("myhouse.jsp");
+
+
     }
 }
