@@ -81,7 +81,7 @@
                     label="操作"
                     align="center">
                 <template slot-scope="scope">
-                    <el-button @click="change(scope.row)" type="text" size="small">修改</el-button>
+                    <el-button @click="change(scope.row)" type="primary" size="small">修改</el-button>
                     <el-button @click="shanchu(scope.row)" type="primary" size="small">删除</el-button>
                 </template>
 
