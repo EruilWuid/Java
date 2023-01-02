@@ -9,25 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4157066-2b0c-4485-8ed2-208eace05121" name="变更" comment="突飞猛进">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/controller/TranChangeServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/about.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/changeinfo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="c4157066-2b0c-4485-8ed2-208eace05121" name="变更" comment="完成版，差删除">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/controller/FindDetailServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/controller/FindDetailServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/controller/SaveDetailServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/controller/SaveDetailServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/controller/UpdateHouseInfoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/controller/UpdateHouseInfoServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/entity/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/entity/House.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/PropertyLeasing/mapper/HouseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/PropertyLeasing/mapper/HouseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Info.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/myhouse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/myhouse.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pro_er.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pro_er.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/reg.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reg.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/user_pwd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user_pwd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/rentalhouse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/rentalhouse.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +235,7 @@
       <workItem from="1672469798829" duration="99000" />
       <workItem from="1672469932185" duration="26191000" />
       <workItem from="1672555769392" duration="31592000" />
-      <workItem from="1672643506954" duration="10218000" />
+      <workItem from="1672643506954" duration="11062000" />
     </task>
     <task id="LOCAL-00001" summary="基本框架">
       <created>1671719138006</created>
@@ -385,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672645304752</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="完成版，差删除">
+      <created>1672654035775</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1672654035775</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +452,8 @@
     <MESSAGE value="mapper写完，selectAllServlet测试" />
     <MESSAGE value="后端写完" />
     <MESSAGE value="突飞猛进" />
-    <option name="LAST_COMMIT_MESSAGE" value="突飞猛进" />
+    <MESSAGE value="完成版，差删除" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成版，差删除" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

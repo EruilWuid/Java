@@ -82,7 +82,7 @@
                     align="center">
                 <template slot-scope="scope">
                     <el-button @click="change(scope.row)" type="primary" size="small">修改</el-button>
-                    <el-button @click="shanchu(scope.row)" type="primary" size="small">删除</el-button>
+                    <el-button @click="shanchu(scope.row);refresh()" type="primary" size="small">删除</el-button>
                 </template>
 
             </el-table-column>
@@ -123,6 +123,10 @@
             }
         },
         methods: {
+            refresh(){
+                console.log("点击刷新页面")
+                window.location.reload() // 第一种方式
+            },
             shanchu(row){
                 var _this=this;
                 axios({
@@ -131,9 +135,6 @@
                     data:row
                 }).then(function(resp){
                     _this.housetable = resp.data;
-                }).then(function (response) {
-                    // 刷新页面
-                    window.location.reload()
                 })
             },
             change(row){
