@@ -9,10 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4157066-2b0c-4485-8ed2-208eace05121" name="变更" comment="完成版，差删除">
+    <list default="true" id="c4157066-2b0c-4485-8ed2-208eace05121" name="变更" comment="完成版">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/upload/251623514311143.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/controller/UpdateHouseInfoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/controller/UpdateHouseInfoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/entity/Page.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/service/HouseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/service/HouseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/service/impl/HouseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/PropertyLeasing/service/impl/HouseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/PropertyLeasing/mapper/HouseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/PropertyLeasing/mapper/HouseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/left.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/myhouse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/myhouse.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/rentalhouse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/rentalhouse.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,30 +63,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "F:/Java BW/PropertyLeasing-master",
-    "project.structure.last.edited": "项目",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Java BW/PropertyLeasing-master&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ],
-    "RunConfigurationTargetLRU": [
-      "ae26db78-e6e6-4ffe-bc6c-0640e0b5e446"
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;ae26db78-e6e6-4ffe-bc6c-0640e0b5e446&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Java BW\Java_BW\src\main\webapp\js" />
@@ -235,7 +241,8 @@
       <workItem from="1672469798829" duration="99000" />
       <workItem from="1672469932185" duration="26191000" />
       <workItem from="1672555769392" duration="31592000" />
-      <workItem from="1672643506954" duration="11062000" />
+      <workItem from="1672643506954" duration="12738000" />
+      <workItem from="1672744750451" duration="6220000" />
     </task>
     <task id="LOCAL-00001" summary="基本框架">
       <created>1671719138006</created>
@@ -377,7 +384,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672654035775</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="完成版">
+      <created>1672654770653</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1672654770653</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +467,8 @@
     <MESSAGE value="后端写完" />
     <MESSAGE value="突飞猛进" />
     <MESSAGE value="完成版，差删除" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成版，差删除" />
+    <MESSAGE value="完成版" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成版" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

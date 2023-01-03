@@ -17,7 +17,7 @@
         <dt class="vipIcon3">账户设置</dt>
         <dd>
             <a href="UpdateUserInfoServlet">我的资料</a>
-            <a href="UpdateUserPwdServlet">账户密码设置</a>
+            <a href="UpDataUserPwdServlet">账户密码设置</a>
         </dd>
 <%--        <dt class="vipIcon1">我的XXX</dt>--%>
 <%--        <dd>--%>

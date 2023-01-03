@@ -17,11 +17,11 @@
         <set>
             <if test="rent != 0.00"> rent = #{rent} ,</if>
             <if test="area != 0.00"> area = #{area} ,</if>
-            <if test="orientation != null"> orientation = #{orientation} ,</if>
+            <if test="orientation != '' "> orientation = #{orientation} ,</if>
             <if test="floor != 0">floor = #{floor}, </if>
-            <if test="address != null"> address = #{address}, </if>
-            <if test="housedescribe != null"> housedescribe = #{housedescribe} ,</if>
-            <if test="communityname != null"> communityname = #{communityname} </if>
+            <if test="address != '' "> address = #{address}, </if>
+            <if test="housedescribe != null "> housedescribe = #{housedescribe} ,</if>
+            <if test="communityname != '' "> communityname = #{communityname} </if>
         </set>
             where houseid = #{houseid}
     </update>

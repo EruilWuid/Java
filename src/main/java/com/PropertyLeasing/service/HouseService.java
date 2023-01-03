@@ -1,10 +1,7 @@
 package com.PropertyLeasing.service;
 
 import com.PropertyLeasing.entity.House;
-import com.PropertyLeasing.entity.Page;
 import com.PropertyLeasing.entity.User;
-import com.PropertyLeasing.mapper.UserMapper;
-import org.apache.ibatis.session.SqlSession;
 
 import java.util.List;
 

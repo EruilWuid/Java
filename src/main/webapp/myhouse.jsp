@@ -119,7 +119,6 @@
             return {
                 houses:[],
                 housetable:[]
-
             }
         },
         methods: {

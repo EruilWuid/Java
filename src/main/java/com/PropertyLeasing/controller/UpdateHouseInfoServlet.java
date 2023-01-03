@@ -37,7 +37,7 @@ public class UpdateHouseInfoServlet extends HttpServlet {
              rent = Double.parseDouble(t_rent);
         }
 
-        if(t_rent != ""){
+        if(t_area != ""){
              area = Double.parseDouble(t_area);
         }
         if(t_floor != ""){

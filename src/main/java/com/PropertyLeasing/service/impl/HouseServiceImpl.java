@@ -1,7 +1,6 @@
 package com.PropertyLeasing.service.impl;
 
 import com.PropertyLeasing.entity.House;
-import com.PropertyLeasing.entity.Page;
 import com.PropertyLeasing.entity.User;
 import com.PropertyLeasing.mapper.HouseMapper;
 import com.PropertyLeasing.service.HouseService;
